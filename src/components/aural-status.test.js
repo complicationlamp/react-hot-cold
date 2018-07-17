@@ -3,15 +3,21 @@ import {shallow} from 'enzyme';
 
 import AuralStatus from './aural-status';
 
-describe ('<AuralSstatus />', () => {
+describe ('<AuralStatus />', () => {
 	it('renders without crashing', () => {
 		shallow(<AuralStatus />)
 	} );
 
-	// it('Renders an aural status update', () => {
-	// 	let TEST_STATUS = 'You are listening to a game!';
+	it('Should render some class', () => {
+		let wrapper = shallow(<AuralStatus/>);
+		expect(wrapper.hasClass("visuallyhidden")).toEqual(true);
 
-	// 	let wrapper = shallow(<AuralStatus auralStatus={TEST_STATUS}/>);
-	// 	expect(wrapper.contains(TEST_STATUS)).toEqual(true);
+	});
+
+	// it ('should have a status', () => {
+	// 	let TEST_STATUS = 'this is the status';
+
+	// 	let wrapper = shallow(<AuralStatus auralSatus={TEST_STATUS} />);
+	// 	expect(wrapper.contains(TEST_STATUS)).toEqual(true)
 	// });
 });
