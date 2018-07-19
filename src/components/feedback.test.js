@@ -13,5 +13,6 @@ describe('<Feedback />', () => {
 
 		let wrapper = shallow(<Feedback feedBack={TEST_FEEDBACK} />);
 		expect(wrapper.contains(TEST_FEEDBACK)).toEqual(false);
+		////////////////////FALSE NEEDS TO BE SET TO TRUE/////////////////////////////
 	});
 }); 
