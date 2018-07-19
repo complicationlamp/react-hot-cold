@@ -2,7 +2,13 @@ language: node_js
 node_js: node
 cache:
   directories:
-    - node_modules
+  - node_modules
 env:
-  - CI=true
-
+- CI=true
+deploy:
+  provider: heroku
+  api_key:
+    secure: Re/iC3MDc38PhUYZQ/f+wX5ffije2ULbYQvs9dZkSg6ct1HL+Io0+Hv00dLYqFt+XZjschd+BPkPW/VGjuMoUKR3uyqiwz20Zt3ZykMVNSQnn06dPJsltfkiR40YNGWA0bOAqgbyzfgAVxI/tYJBayJePb+wDaM3X6lgr/oYDtBkvZtcIJwQnH1RbChNP6tHcDvy4up/S+fgZN1m1MNWehc+xXJaXMGp7RahrjMNDSs2FV1Ob56sHT2Lf7FqroE8FJbTXdV6PbRlCBZSYvLsIbjd0vA81BJgwv6Px/9rIdogn2M3Ro1JlCovn3oEfceqDZuqb065fDWo8d4yCheuM4zhBuu8hvjnHRUs5uTzNP0r4DMtiHMO+3W9Pg37EsJ/vghhbEUC7Hzj/JmMNF6oBvjkcSQ/i9151NP/lrnfZ3eCEEcgAY4wJcE0wHEvE08mPylGpPJo307a+U/1aFlB6ELY/PDosnF6IZa8HBn0TR0fpwyZ7LqAErzvhKT/sIzQ/WqYdpXDjMSGjLuI1EfEWBfDkLommiADWcFA2tAoiTfFwpYL3U6LgpBtVyPpDnpmNpFdoUF17LEh4yrU9PWlHnMDCRv/AvYPuZfRfTm0cDKMJTtAP/9in+fC3to/mpcUJOxVrP5W+nDCaMISk0qmM4odY23o0Uurxn/+79l62I0=
+  app: react-hot-cold
+  on:
+    repo: complicationlamp/react-hot-cold
